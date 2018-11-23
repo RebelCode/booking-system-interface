@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings;
+namespace RebelCode\Bookings\Resources;
 
 use Dhii\Util\String\StringableInterface as Stringable;
 use stdClass;

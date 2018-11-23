@@ -4,6 +4,7 @@ namespace RebelCode\Bookings;
 
 use Dhii\Data\IdAwareInterface;
 use Dhii\Time\PeriodInterface;
+use RebelCode\Bookings\Resources\ResourceIdsAwareInterface;
 
 /**
  * Represents a booking as an identifiable period of time during which a set of resources are reserved.
