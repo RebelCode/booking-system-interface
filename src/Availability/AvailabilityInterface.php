@@ -26,7 +26,7 @@ interface AvailabilityInterface
      *
      * @param PeriodInterface $range The range of time for which to retrieve available periods.
      *
-     * @return PeriodInterface[]|stdClass|Traversable The list of available periods of time.
+     * @return AvailabilityPeriodInterface[]|stdClass|Traversable The list of available periods of time.
      */
     public function getAvailablePeriods(PeriodInterface $range);
 }
