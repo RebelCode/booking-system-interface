@@ -2,6 +2,7 @@
 
 namespace RebelCode\Bookings\Sessions;
 
+use Dhii\Time\PeriodInterface;
 use Dhii\Util\String\StringableInterface as Stringable;
 
 /**
@@ -26,8 +27,7 @@ interface SessionTypeInterface
      * @since [*next-version*]
      *
      * @param int|string|Stringable $time  The timestamp for the time at which to retrieve the session.
-     * @param int|string|Stringable $start The start timestamp of the generation period.
-     * @param int|string|Stringable $end   The end timestamp of the generation period.
+     * @param PeriodInterface       $range The session generation time range.
      *
      * @return array An array containing the session data. Must have at least the following keys:
      *               * "in"    => the time at which the session begins reserving time
@@ -35,5 +35,5 @@ interface SessionTypeInterface
      *               * "start" => the start time of the session
      *               * "end"   => the end time of the session
      */
-    public function getSessionAt($time, $start, $end);
+    public function getSessionAt($time, PeriodInterface $range);
 }

@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Sessions;
 
-use Dhii\Util\String\StringableInterface as Stringable;
+use Dhii\Time\PeriodInterface;
 use stdClass;
 use Traversable;
 
@@ -18,10 +18,9 @@ interface SessionGeneratorInterface
      *
      * @since [*next-version*]
      *
-     * @param int|string|Stringable $start The start timestamp of the generation period.
-     * @param int|string|Stringable $end   The end timestamp of the generation period.
+     * @param PeriodInterface $range The range of time in which to generate sessions.
      *
      * @return array|stdClass|Traversable A list of generated sessions.
      */
-    public function generate($start, $end);
+    public function generate(PeriodInterface $range);
 }
