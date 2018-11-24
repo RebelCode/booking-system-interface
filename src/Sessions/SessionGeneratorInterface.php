@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Sessions;
 
-use Dhii\Time\PeriodInterface;
+use RebelCode\Bookings\Availability\AvailabilityPeriodInterface;
 use stdClass;
 use Traversable;
 
@@ -18,9 +18,9 @@ interface SessionGeneratorInterface
      *
      * @since [*next-version*]
      *
-     * @param PeriodInterface $range The range of time in which to generate sessions.
+     * @param AvailabilityPeriodInterface $period The availability period to generate sessions for.
      *
      * @return array|stdClass|Traversable A list of generated sessions.
      */
-    public function generate(PeriodInterface $range);
+    public function generate(AvailabilityPeriodInterface $period);
 }
