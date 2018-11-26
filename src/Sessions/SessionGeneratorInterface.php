@@ -18,9 +18,10 @@ interface SessionGeneratorInterface
      *
      * @since [*next-version*]
      *
-     * @param AvailabilityPeriodInterface $period The availability period to generate sessions for.
+     * @param AvailabilityPeriodInterface                 $period       The availability period to generate for.
+     * @param SessionTypeInterface[]|stdClass|Traversable $sessionTypes The types of sessions to generate.
      *
      * @return array|stdClass|Traversable A list of generated sessions.
      */
-    public function generate(AvailabilityPeriodInterface $period);
+    public function generate(AvailabilityPeriodInterface $period, $sessionTypes);
 }
